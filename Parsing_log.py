@@ -17,7 +17,7 @@ for root, dirs, files in os.walk(root_folder):
                 selected_lines = [lines[i - 1].strip() for i in [1, 3, 4, 5, 6]]
                 summary_lines.append(selected_lines)
 
-                # 取出 DIMM Margin
+                # 取出 Margin
                 found = False
                 temp_margin = []
                 for line in lines:
@@ -29,7 +29,7 @@ for root, dirs, files in os.walk(root_folder):
                         break
                 summary_margin.append(temp_margin)
                 
-                # 取出 DIMM Result
+                # 取出 Result
                 for line in lines:
                     if "FINAL_RESULT:" in line: 
                         summary_result.append(line.strip())
